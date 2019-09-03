@@ -1,0 +1,24 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1" metadata-complete="true">
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  <!-- 应用启动时，加载servlet -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring/spring-*.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <!-- 约定优于配置，  Spring MVC框架默认加载/WEB-INF/<servlet-name/>开头-servlet.xml（即ds-servlet.xml）作为配置文件载入Web工程中-->
+    <servlet-name>dispatcher</servlet-name>
+    <!-- 拦截配置 -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+</web-app>
