@@ -1,4 +1,4 @@
-package main.java.com.ssm.dao;
+package com.ssm.dao;
 
 public class HassonDao {
 }
