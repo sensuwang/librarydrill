@@ -6,4 +6,5 @@
 <select id="listBookInfo" resultType="com.ssm.entity.BookInfo">
         select * from bookinfo
 </select>
+
 </mapper>
