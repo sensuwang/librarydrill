@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.SensuDao">
+    <select id="getAllBookInfo" resultType="com.ssm.entity.BookInfo">
+        select id, book_name, book_img, book_now_price, book_pre_price,
+        book_discount, book_author, book_publish, book_publish_date, book_detail
+        from bookinfo
+        <where>
+            <if test="true">1 = 1 </if>
+        </where>
+    </select>
+
+</mapper>
