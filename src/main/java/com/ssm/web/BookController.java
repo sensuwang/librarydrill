@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -38,9 +39,11 @@ public class BookController {
      * 根据name模糊查询信息
      * */
     @RequestMapping("findbyname")
-    public ModelAndView findByName(String bookName) {
+    public ModelAndView findByName(HttpServletRequest request) {
+        String bookName = request.getParameter("bookName");
+        System.out.println("bookname----"+bookName);
         ModelAndView mav = new ModelAndView("bookInfo");
-        BookInfo bookInfo = bookService.findBookByName(bookName);
+        List<BookInfo> bookInfo = bookService.findBookByName(bookName);
         System.out.println(bookInfo);
         mav.addObject("bookInfo",bookInfo);
         //mav.setViewName("index.jsp");

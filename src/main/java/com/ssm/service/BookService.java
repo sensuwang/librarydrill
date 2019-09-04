@@ -19,7 +19,7 @@ public interface BookService {
     /*
     * 根据name模糊查询信息
     * */
-    BookInfo findBookByName(String bookName);
+    List<BookInfo> findBookByName(String bookName);
 
 
 }

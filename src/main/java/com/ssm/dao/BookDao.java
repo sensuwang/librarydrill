@@ -16,6 +16,9 @@ public interface BookDao {
      *
      * */
     BookInfo findBookById(int id);
-    BookInfo findBookByName(String bookName);
+    /*
+    * 根据书名模糊查询
+    * */
+    List<BookInfo> findBookByName(String bookName);
 
 }

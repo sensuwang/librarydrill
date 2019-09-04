@@ -16,9 +16,12 @@
 <body>
 <div>
     <div class="input-group input-group-lg">
-        <input type="text" class="form-control" placeholder="Bookname" aria-describedby="sizing-addon1">
-        <a href="" class="input-group-addon" id="sizing-addon1">@</a>
+        <form action="findbyname">
+        <input type="text" class="form-control" placeholder="Bookname"  value="bookName" name = "bookName" aria-describedby="sizing-addon1">
+        <input type="submit" value="搜索">
+        </form>
     </div>
+
 
     <div class="btn-group" role="group" aria-label="...">
         <button type="button" class="btn btn-default">综合</button>
