@@ -98,4 +98,20 @@ public class BookInfo {
     public void setBookDetail(String bookDetail) {
         this.bookDetail = bookDetail;
     }
+
+    @Override
+    public String toString() {
+        return "BookInfo{" +
+                "id=" + id +
+                ", bookName='" + bookName + '\'' +
+                ", bookImg='" + bookImg + '\'' +
+                ", bookNowPrice='" + bookNowPrice + '\'' +
+                ", bookPrePrice='" + bookPrePrice + '\'' +
+                ", bookDiscount='" + bookDiscount + '\'' +
+                ", bookAuthor='" + bookAuthor + '\'' +
+                ", bookPublish='" + bookPublish + '\'' +
+                ", bookPublishData=" + bookPublishData +
+                ", bookDetail='" + bookDetail + '\'' +
+                '}';
+    }
 }
