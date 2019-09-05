@@ -15,20 +15,31 @@
 </head>
 <body>
 <div>
+<div style="display: inline">
     <div class="input-group input-group-lg">
         <form action="findbyname">
-        <input type="text" class="form-control" placeholder="Bookname"  value="bookName" name = "bookName" aria-describedby="sizing-addon1">
+        <input type="text" class="form-control" placeholder="Bookname" name = "bookName" aria-describedby="sizing-addon1">
         <input type="submit" value="搜索">
         </form>
     </div>
-
-
     <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default">综合</button>
+        <button type="button" class="btn btn-default" onclick="window.parent.location.href='findAll';">综合</button>
         <button type="button" class="btn btn-default">销量</button>
         <button type="button" class="btn btn-default">出版日期</button>
-        <button type="button" class="btn btn-default">价格</button>
+        <button type="button" class="btn btn-default" onclick="window.parent.location.href='findorderbyprice';">价格</button>
+
     </div>
+</div>
+    <div class="f-price-set"style="display: inline">
+        <form action="findbetweenand">
+
+        <input type="text" autocomplete="off" style="color: rgb(204, 204, 204);"  name="low">
+        <em>-</em>
+        <input type="text" autocomplete="off" style="color:#ccc"  name="high">
+         <input type="submit" value="确定">
+        </form>
+    </div>
+
 
     <table border="1" cellspacing="0" cellpadding="0">
 
@@ -37,7 +48,7 @@
         <th>书名</th>
         <th>图片</th>
         <th>现价</th>
-        <th>前价</th>
+        <th>原价</th>
         <th>折扣</th>
         <th>作者</th>
         <th>出版社</th>
@@ -56,13 +67,13 @@
             <td>${d.bookDiscount}</td>
             <td>${d.bookAuthor}</td>
             <td>${d.bookPublish}</td>
-            <td>${d.bookPublishData}</td>
+            <td>${d.bookPublishDate}</td>
             <td>${d.bookDetail}</td>
             <td>
                 <a href="findbyid?id=${d.id}">详情</a>
             </td>
             <td>
-                <a href="editgo?id=${d.id}">修改</a>
+                <a href="updatebooinfo?id=${d.id}">修改</a>
             </td>
             <td>
                 <a href="delete?id=${d.id}">删除</a>

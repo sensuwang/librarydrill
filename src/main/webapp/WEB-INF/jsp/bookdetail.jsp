@@ -23,7 +23,7 @@
         <th>书名</th>
         <th>图片</th>
         <th>现价</th>
-        <th>前价</th>
+        <th>原价</th>
         <th>折扣</th>
         <th>作者</th>
         <th>出版社</th>
@@ -39,7 +39,7 @@
         <td>${bookInfo.bookDiscount}</td>
         <td>${bookInfo.bookAuthor}</td>
         <td>${bookInfo.bookPublish}</td>
-        <td>${bookInfo.bookPublishData}</td>
+        <td>${bookInfo.bookPublishDate}</td>
         <td>${bookInfo.bookDetail}</td>
     </tr>
 

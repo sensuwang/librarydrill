@@ -21,4 +21,9 @@ public interface BookDao {
     * */
     List<BookInfo> findBookByName(String bookName);
 
+    List<BookInfo> findOderByPrice();
+
+    List<BookInfo> findBetweenAnd(String high,String low);
+
+
 }

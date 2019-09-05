@@ -2,6 +2,7 @@ package com.ssm.service;
 
 import com.ssm.entity.BookInfo;
 
+import java.sql.SQLOutput;
 import java.util.List;
 
 public interface BookService {
@@ -20,6 +21,9 @@ public interface BookService {
     * 根据name模糊查询信息
     * */
     List<BookInfo> findBookByName(String bookName);
+    List<BookInfo> findOderByPrice();
+
+    List<BookInfo> findBetweenAnd(String high,String low);
 
 
 }

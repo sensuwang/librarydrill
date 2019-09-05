@@ -16,7 +16,7 @@ public class BookInfo {
     private String bookDiscount;
     private String bookAuthor;
     private String bookPublish;
-    private Date bookPublishData;
+    private Date bookPublishDate;
     private String bookDetail;
 
     public Integer getId() {
@@ -83,12 +83,12 @@ public class BookInfo {
         this.bookPublish = bookPublish;
     }
 
-    public Date getBookPublishData() {
-        return bookPublishData;
+    public Date getBookPublishDate() {
+        return bookPublishDate;
     }
 
-    public void setBookPublishData(Date bookPublishData) {
-        this.bookPublishData = bookPublishData;
+    public void setBookPublishDate(Date bookPublishDate) {
+        this.bookPublishDate = bookPublishDate;
     }
 
     public String getBookDetail() {
@@ -110,7 +110,7 @@ public class BookInfo {
                 ", bookDiscount='" + bookDiscount + '\'' +
                 ", bookAuthor='" + bookAuthor + '\'' +
                 ", bookPublish='" + bookPublish + '\'' +
-                ", bookPublishData=" + bookPublishData +
+                ", bookPublishDate=" + bookPublishDate +
                 ", bookDetail='" + bookDetail + '\'' +
                 '}';
     }
