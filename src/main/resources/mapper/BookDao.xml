@@ -12,6 +12,14 @@
 </select>
 
 <select id="findBookByName" resultType="com.ssm.entity.BookInfo">
-        select * from bookinfo where book_Name like #{bookName}
+        select * from bookinfo where book_name like concat('%',#{bookName},'%')
+</select>
+<select id="findOderByPrice" resultType="com.ssm.entity.BookInfo">
+        select * from bookinfo order by book_now_price
+
+</select>
+<select id="findBetweenAnd" resultType="com.ssm.entity.BookInfo">
+        select * from bookinfo where book_now_price between #{param2} and #{param1}
+
 </select>
 </mapper>

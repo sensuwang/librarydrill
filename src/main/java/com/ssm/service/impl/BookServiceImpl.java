@@ -22,7 +22,20 @@ public class BookServiceImpl  implements BookService {
     }
 
     @Override
-    public BookInfo findBookByName(String bookName) {
+    public List<BookInfo> findBookByName(String bookName) {
         return bookDao.findBookByName(bookName);
     }
+
+    @Override
+    public List<BookInfo> findOderByPrice() {
+        return bookDao.findOderByPrice();
+    }
+
+    @Override
+    public List<BookInfo> findBetweenAnd(String high, String low) {
+        System.out.println("service");
+        return bookDao.findBetweenAnd(high,low);
+    }
+
+
 }
